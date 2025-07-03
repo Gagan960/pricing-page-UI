@@ -1,0 +1,168 @@
+<!-- Q4. A client of yours wants to add a pricing section on their website to showcase their newly introduced premium plans. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Plans</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b062d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .pricing-section {
+      background-color: #f5f4fc;
+      padding: 50px;
+      border-radius: 20px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      width: 300px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card.dark {
+      background-color: #1e293b;
+      color: #ffffff;
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .card p.subtext {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .card.dark p.subtext {
+      color: #cbd5e1;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .features li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .features li::before {
+      content: "✔";
+      color: #0f172a;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .card.dark .features li::before {
+      color: #ffffff;
+    }
+
+    .subscribe-btn {
+      background-color: #1e293b;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .subscribe-btn:hover {
+      background-color: #334155;
+    }
+
+    .card.dark .subscribe-btn {
+      background-color: #ffffff;
+      color: #1e293b;
+    }
+
+    .card.dark .subscribe-btn:hover {
+      background-color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pricing-section">
+    <!-- Free Plan -->
+    <div class="card">
+      <h2>Free Plan</h2>
+      <p class="subtext">For personal</p>
+      <div class="price">$0</div>
+      <ul class="features">
+        <li>1 users</li>
+        <li>4 Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL</li>
+      </ul>
+      <button class="subscribe-btn">Subscribe now</button>
+    </div>
+
+    <!-- Basic Plan -->
+    <div class="card dark">
+      <h2>Basic Plan</h2>
+      <p class="subtext">For small business</p>
+      <div class="price">$29</div>
+      <ul class="features">
+        <li>4 users</li>
+        <li>10 Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL</li>
+      </ul>
+      <button class="subscribe-btn">Subscribe now</button>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="card">
+      <h2>Pro Plan</h2>
+      <p class="subtext">For enterprise</p>
+      <div class="price">$49</div>
+      <ul class="features">
+        <li>Unlimited users</li>
+        <li>Unlimited Web mails</li>
+        <li>Responsive Website</li>
+        <li>Free SSL + SEO</li>
+      </ul>
+      <button class="subscribe-btn">Subscribe now</button>
+    </div>
+  </div>
+
+</body>
+</html>
